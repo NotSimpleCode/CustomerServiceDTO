@@ -11,4 +11,7 @@ public interface CustomerItemRepo extends JpaRepository<CustomerItem, Integer> {
 
     @SuppressWarnings("null")
     List<CustomerItem> findAll();
+
+    @SuppressWarnings("null")
+    void deleteById(Integer id);
 }

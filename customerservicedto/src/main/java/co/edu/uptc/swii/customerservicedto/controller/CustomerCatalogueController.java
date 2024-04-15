@@ -42,4 +42,10 @@ public class CustomerCatalogueController {
         List<CustomerItem> customerItems = customerCatalogueService.fetchAllCustomers();
         return new ResponseEntity<>(customerItems, HttpStatus.OK);
     }
+
+    @GetMapping("/deletecustomer/{id}")
+    public ResponseEntity<String> deleteCustomer(@PathVariable Integer customerId) {
+        String response = customerCatalogueService.deleteCustomer(customerId);
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
 }

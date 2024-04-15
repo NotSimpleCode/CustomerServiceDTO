@@ -33,4 +33,13 @@ public class CustomerCatalogueService {
     public List<CustomerItem> fetchAllCustomers() {
         return customerItemRepo.findAll();
     }
+
+    public String deleteCustomer(Integer id) {
+        try {
+            customerItemRepo.deleteById(id);
+            return "Customer successfully deleted!";
+        } catch (Exception e) {
+            return "Can't delete this customer";
+        }
+    }
 }

@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 public class CustomerItemDTO {
 
     private Integer id;
-    private String firsName;
+    private String firstName;
     private String lastName;
     private String address;
 }
